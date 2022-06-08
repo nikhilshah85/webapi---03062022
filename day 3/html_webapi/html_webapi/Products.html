@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+
+<body>
+    <script>
+        function getProductDetails() {
+            fetch('https://localhost:7017/api/Products/plist')
+                .then((response) => response.json())
+                .then((result) => {
+                    console.log(result);
+                    document.getElementById("test").innerHTML = result[2].pName;
+
+                    for (var i = 0; i < result.length; i++) {
+                        document.getElementById("tblProducts").("<tr> <td>" + result[i].pName + "</td></tr>")
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                })            
+        }
+
+
+    </script>
+
+    <button onclick="getProductDetails()">Show Products</button>
+
+    <h2 id="test"></h2>
+    <table id="tblProducts"></table>
+</body>
+</html>
