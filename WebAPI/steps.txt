@@ -1,0 +1,41 @@
+
+
+
+
+		1. We need to create a web api - 
+			yesterday - hard coded with static collection
+				we made only get call
+			Today - we need to work with data from database, we have a cloud database - Azure
+		2. We need to to make a post call to this webapi, and insert new record using HTML and fetch
+
+------------------------------------------------------
+
+Azure Admin
+	1. Procure a new SQL Server on Azure
+	2. Add firewalls for connect to server
+	3. Add a new database, choose which kind of data you are going to need in your project
+Azure Database developer
+	4. Create a new table, with constraints
+	5. Add some dummmy data for testing
+	6. Collect the connection string for this database
+WebAPI Developer
+	7. Collect the connection string from database developer
+	8. Create a new project, api core
+	9. Add package for EF (4 nuget packages)
+	10. Creat a db context 
+	11. Create a new controller based on EF
+	12. Test the api for CRUD operations
+Frontend developer (MVC, Angular, React, JAVA etc..winForms, WPF )
+	13. Collect all the URL's from WEbAPI developer
+	14. Consume the API 
+	15. Test it locally
+	16. Pass the project to tester
+
+Tester
+	17. Pass the project to Azure admin to for hosting
+
+
+
+
+
+	
